@@ -1,0 +1,23 @@
+{
+  "name": "reddit-personal-filter-list-builder",
+  "version": "0.23",
+  "description": "Simple tool to build an Adblock/UBlock filter list",
+  "scripts": {
+    "start": "bash installReqsAndStart.sh"
+  },
+  "dependencies": {},
+  "engines": {
+    "node": "9.x"
+  },
+  "repository": {
+    "url": "https://glitch.com/edit/#!/reddit-personal-filter-list-builder"
+  },
+  "license": "MIT",
+  "keywords": [
+    "adblock",
+    "ublock",
+    "glitch",
+    "python3",
+    "reddit"
+  ]
+}

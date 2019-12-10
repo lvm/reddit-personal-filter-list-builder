@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Reddit Personal Filter List Builder</title>
+    <meta name="description" content="Reddit Personal Filter List Builder">
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+  </head>
+  <body>
+    <header>
+      <h1>
+        ⛔ Reddit Personal Filter List Builder
+      </h1>
+      <!-- Remix Button -->
+      <a href="https://glitch.com/edit/#!/remix/reddit-personal-filter-list-builder" class="right">
+        <img src="https://cdn.glitch.com/2bdfb3f8-05ef-4035-a06e-2043962a3a13%2Fremix%402x.png?1513093958726" alt="remix this" height="33">
+      </a>
+    </header>
+
+    <main>
+      <p class="bold">Hi!</p>
+      <p>An easy tool to weed out Reddit's nasty stuff 😌</p>
+      <p>Useful info: <ul>
+        <li><a href="https://github.com/gorhill/uBlock/wiki/Filter-lists-from-around-the-web">Filter lists from around the web</a></li>
+        <li><a href="https://filterlists.com/">Filterlists</a></li>
+      </ul>
+      </p>
+
+      <form id="form">
+        <label for="subreddit">Subreddit(s)</label>
+        <input type="text" id="subreddit" name="subreddit"
+               placeholder="separated by commas">
+        <br>
+        <label for="username">Username(s)</label>
+        <input type="text" id="username" name="username"
+               placeholder="separated by commas">
+        <button type="submit">Submit</button>
+      </form>
+      <section id="content">
+        <button type="button" id="download">Download filters</button>
+        <pre id="filter"></pre>
+      </section>
+    </main>
+
+
+    <footer>
+      This was made by <a href="https://glitch.com/@lvm">@lvm</a> <br> 
+      <a href="https://remix.glitch.me/">Remixing</a> <a href="https://python3.glitch.me/">Python 3</a> project.
+    </footer>
+
+    <!-- Your web-app is https, so your scripts need to be too -->
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
+            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+            crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/g/filesaver.js"></script>
+    <script src="{{url_for('static', filename='client.js')}}"></script>
+
+  </body>
+</html>
